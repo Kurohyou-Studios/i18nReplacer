@@ -62,11 +62,11 @@ An html parser to add data-i18n tags to Roll20 character sheet code. Also create
 ## Getting Started
 Install the package using npm:
 ```
-npm i @kurohyou/i18nreplacer
+npm i i18nreplacer
 ```
 Then add the replacer to your script
 ```js
-const replacer = require('@kurohyou/i18nreplacer');
+const replacer = require('i18nreplacer');
 
 // Get html text as normal in your script
 
