@@ -16,12 +16,12 @@ module.exports = function(document) {
   [...document.querySelectorAll(':not(script,style)')].forEach(elem => {
     if(
       !elem.firstElementChild &&
-      !elem['data-i18n'] &&
+      !elem.hasAttribute('data-i18n') &&
       elem.textContent.trim()
     ){
       elem.setAttribute('data-i18n',elem.textContent);
     }
-    ['title','placeholder','label','aria-label','alt','vars','dynamic'].forEach(prop => {
+    ['title','placeholder','label','aria-label','alt'].forEach(prop => {
       const value = elem.getAttribute(prop);
       if(
         value &&
